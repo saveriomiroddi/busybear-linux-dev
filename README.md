@@ -195,7 +195,7 @@ iface br0 inet static
 ```
 #!/bin/sh
 
-brctl addif br0 $1
+brctl addif virbr0 $1
 ifconfig $1 up
 ```
 
@@ -205,7 +205,7 @@ ifconfig $1 up
 #!/bin/sh
 
 ifconfig $1 down
-brctl delif br0 $1
+brctl delif virbr0 $1
 ```
 
 ## macOS bridged networking
